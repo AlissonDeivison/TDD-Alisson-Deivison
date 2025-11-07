@@ -17,3 +17,6 @@ class ContaBancaria:  # BankAccount
         if valor > self.saldo:
             raise ValueError("Saldo insuficiente para saque")
         self.saldo -= valor
+        
+    def consultar_saldo(self):
+        return self.saldo
