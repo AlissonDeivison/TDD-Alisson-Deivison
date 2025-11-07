@@ -4,4 +4,8 @@ class ContaBancaria:  # BankAccount
         self.nome = nome
         self.saldo = float(saldo)
 
-    
+    def depositar(self, valor):
+        valor = float(valor)
+        if valor <= 0:
+            raise ValueError("Valor de depósito deve ser maior que zero")
+        self.saldo += valor
